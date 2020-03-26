@@ -16,7 +16,7 @@ int main() {
     for(int i = 4; i >= 0; i--) {
         b[4-i] = a[i];
 
-    }
+    }   
 
 
     //Print B array
