@@ -67,8 +67,34 @@ class LinkedList
             
             }
             return slow->data;
+        }
 
-            cout<<"I am running";
+        void Reverse()
+        {
+            Node *p = head;
+            Node *q = NULL;
+            Node *r = NULL;
+
+            while(p!=NULL)
+            {
+                r = q;
+                q = p;
+                p = p->next;
+                q->next = r;
+            }
+            head = q;
+
+        }
+
+        void ReverseRecursion(Node *q, Node *p)
+        {
+            if(p!=NULL){
+                ReverseRecursion(p, p->next);
+            }else{
+                head = q;
+            }
+            return head;
+
 
         }
 };
@@ -86,9 +112,8 @@ int main()
 
     ll.Display();
 
-    int value = ll.Middle();
-
-    cout<<"Middle value is : "<<value;
+    ll.Reverse();
+    ll.Display();
 
     return 0;
 }
