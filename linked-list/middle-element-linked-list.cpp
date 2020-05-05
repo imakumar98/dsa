@@ -86,7 +86,7 @@ class LinkedList
 
         }
 
-        void ReverseRecursion(Node *q, Node *p)
+        int ReverseRecursion(Node *q, Node *p)
         {
             if(p!=NULL){
                 ReverseRecursion(p, p->next);
